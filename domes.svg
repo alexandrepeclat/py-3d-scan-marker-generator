@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1900" viewBox="0 0 1700 1900" font-family="sans-serif">
-<text x="170.0" y="30.0" text-anchor="middle" font-size="16">Dôme 1</text>
+<text x="170.0" y="30.0" text-anchor="middle" font-size="16">Dome 1</text>
 <polygon points="230.0,190.0 200.0,242.0 140.0,242.0 110.0,190.0 140.0,138.0 200.0,138.0" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="170.0" cy="190.0" r="7" fill="black" />
 <polygon points="200.0,138.0 140.0,138.0 110.0,99.3 140.0,60.6 200.0,60.6 230.0,99.3" fill="white" stroke="black" stroke-width="1.5" />
@@ -23,7 +23,7 @@
 <polygon points="24.4,218.0 24.4,162.0 42.9,116.6 61.5,127.3 61.5,183.4 42.9,228.7" fill="white" stroke="black" stroke-width="1.5" />
 <polygon points="140.0,60.6 110.0,99.3 61.5,127.3 42.9,116.6 72.9,77.9 121.5,49.9" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="91.5" cy="88.6" r="7" fill="black" />
-<text x="510.0" y="30.0" text-anchor="middle" font-size="16">Dôme 2</text>
+<text x="510.0" y="30.0" text-anchor="middle" font-size="16">Dome 2</text>
 <polygon points="570.0,190.0 540.0,242.0 480.0,242.0 450.0,190.0 480.0,138.0 540.0,138.0" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="510.0" cy="190.0" r="7" fill="black" />
 <polygon points="540.0,138.0 480.0,138.0 450.0,99.3 480.0,60.6 540.0,60.6 570.0,99.3" fill="white" stroke="black" stroke-width="1.5" />
@@ -47,7 +47,7 @@
 <polygon points="364.4,218.0 364.4,162.0 382.9,116.6 401.5,127.3 401.5,183.4 382.9,228.7" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="382.9" cy="172.7" r="7" fill="black" />
 <polygon points="480.0,60.6 450.0,99.3 401.5,127.3 382.9,116.6 412.9,77.9 461.5,49.9" fill="white" stroke="black" stroke-width="1.5" />
-<text x="850.0" y="30.0" text-anchor="middle" font-size="16">Dôme 3</text>
+<text x="850.0" y="30.0" text-anchor="middle" font-size="16">Dome 3</text>
 <polygon points="910.0,190.0 880.0,242.0 820.0,242.0 790.0,190.0 820.0,138.0 880.0,138.0" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="850.0" cy="190.0" r="7" fill="black" />
 <polygon points="880.0,138.0 820.0,138.0 790.0,99.3 820.0,60.6 880.0,60.6 910.0,99.3" fill="white" stroke="black" stroke-width="1.5" />
@@ -71,7 +71,7 @@
 <polygon points="704.4,218.0 704.4,162.0 722.9,116.6 741.5,127.3 741.5,183.4 722.9,228.7" fill="white" stroke="black" stroke-width="1.5" />
 <polygon points="820.0,60.6 790.0,99.3 741.5,127.3 722.9,116.6 752.9,77.9 801.5,49.9" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="771.5" cy="88.6" r="7" fill="black" />
-<text x="1190.0" y="30.0" text-anchor="middle" font-size="16">Dôme 4</text>
+<text x="1190.0" y="30.0" text-anchor="middle" font-size="16">Dome 4</text>
 <polygon points="1250.0,190.0 1220.0,242.0 1160.0,242.0 1130.0,190.0 1160.0,138.0 1220.0,138.0" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="1190.0" cy="190.0" r="7" fill="black" />
 <polygon points="1220.0,138.0 1160.0,138.0 1130.0,99.3 1160.0,60.6 1220.0,60.6 1250.0,99.3" fill="white" stroke="black" stroke-width="1.5" />
@@ -95,7 +95,7 @@
 <polygon points="1044.4,218.0 1044.4,162.0 1062.9,116.6 1081.5,127.3 1081.5,183.4 1062.9,228.7" fill="white" stroke="black" stroke-width="1.5" />
 <polygon points="1160.0,60.6 1130.0,99.3 1081.5,127.3 1062.9,116.6 1092.9,77.9 1141.5,49.9" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="1111.5" cy="88.6" r="7" fill="black" />
-<text x="1530.0" y="30.0" text-anchor="middle" font-size="16">Dôme 5</text>
+<text x="1530.0" y="30.0" text-anchor="middle" font-size="16">Dome 5</text>
 <polygon points="1590.0,190.0 1560.0,242.0 1500.0,242.0 1470.0,190.0 1500.0,138.0 1560.0,138.0" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="1530.0" cy="190.0" r="7" fill="black" />
 <polygon points="1560.0,138.0 1500.0,138.0 1470.0,99.3 1500.0,60.6 1560.0,60.6 1590.0,99.3" fill="white" stroke="black" stroke-width="1.5" />
@@ -119,7 +119,7 @@
 <polygon points="1384.4,218.0 1384.4,162.0 1402.9,116.6 1421.5,127.3 1421.5,183.4 1402.9,228.7" fill="white" stroke="black" stroke-width="1.5" />
 <polygon points="1500.0,60.6 1470.0,99.3 1421.5,127.3 1402.9,116.6 1432.9,77.9 1481.5,49.9" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="1451.5" cy="88.6" r="7" fill="black" />
-<text x="170.0" y="410.0" text-anchor="middle" font-size="16">Dôme 6</text>
+<text x="170.0" y="410.0" text-anchor="middle" font-size="16">Dome 6</text>
 <polygon points="230.0,570.0 200.0,622.0 140.0,622.0 110.0,570.0 140.0,518.0 200.0,518.0" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="170.0" cy="570.0" r="7" fill="black" />
 <polygon points="200.0,518.0 140.0,518.0 110.0,479.3 140.0,440.6 200.0,440.6 230.0,479.3" fill="white" stroke="black" stroke-width="1.5" />
@@ -143,7 +143,7 @@
 <polygon points="24.4,598.0 24.4,542.0 42.9,496.6 61.5,507.3 61.5,563.4 42.9,608.7" fill="white" stroke="black" stroke-width="1.5" />
 <polygon points="140.0,440.6 110.0,479.3 61.5,507.3 42.9,496.6 72.9,457.9 121.5,429.9" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="91.5" cy="468.6" r="7" fill="black" />
-<text x="510.0" y="410.0" text-anchor="middle" font-size="16">Dôme 7</text>
+<text x="510.0" y="410.0" text-anchor="middle" font-size="16">Dome 7</text>
 <polygon points="570.0,570.0 540.0,622.0 480.0,622.0 450.0,570.0 480.0,518.0 540.0,518.0" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="510.0" cy="570.0" r="7" fill="black" />
 <polygon points="540.0,518.0 480.0,518.0 450.0,479.3 480.0,440.6 540.0,440.6 570.0,479.3" fill="white" stroke="black" stroke-width="1.5" />
@@ -167,7 +167,7 @@
 <polygon points="364.4,598.0 364.4,542.0 382.9,496.6 401.5,507.3 401.5,563.4 382.9,608.7" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="382.9" cy="552.7" r="7" fill="black" />
 <polygon points="480.0,440.6 450.0,479.3 401.5,507.3 382.9,496.6 412.9,457.9 461.5,429.9" fill="white" stroke="black" stroke-width="1.5" />
-<text x="850.0" y="410.0" text-anchor="middle" font-size="16">Dôme 8</text>
+<text x="850.0" y="410.0" text-anchor="middle" font-size="16">Dome 8</text>
 <polygon points="910.0,570.0 880.0,622.0 820.0,622.0 790.0,570.0 820.0,518.0 880.0,518.0" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="850.0" cy="570.0" r="7" fill="black" />
 <polygon points="880.0,518.0 820.0,518.0 790.0,479.3 820.0,440.6 880.0,440.6 910.0,479.3" fill="white" stroke="black" stroke-width="1.5" />
@@ -191,7 +191,7 @@
 <polygon points="704.4,598.0 704.4,542.0 722.9,496.6 741.5,507.3 741.5,563.4 722.9,608.7" fill="white" stroke="black" stroke-width="1.5" />
 <polygon points="820.0,440.6 790.0,479.3 741.5,507.3 722.9,496.6 752.9,457.9 801.5,429.9" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="771.5" cy="468.6" r="7" fill="black" />
-<text x="1190.0" y="410.0" text-anchor="middle" font-size="16">Dôme 9</text>
+<text x="1190.0" y="410.0" text-anchor="middle" font-size="16">Dome 9</text>
 <polygon points="1250.0,570.0 1220.0,622.0 1160.0,622.0 1130.0,570.0 1160.0,518.0 1220.0,518.0" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="1190.0" cy="570.0" r="7" fill="black" />
 <polygon points="1220.0,518.0 1160.0,518.0 1130.0,479.3 1160.0,440.6 1220.0,440.6 1250.0,479.3" fill="white" stroke="black" stroke-width="1.5" />
@@ -215,7 +215,7 @@
 <polygon points="1044.4,598.0 1044.4,542.0 1062.9,496.6 1081.5,507.3 1081.5,563.4 1062.9,608.7" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="1062.9" cy="552.7" r="7" fill="black" />
 <polygon points="1160.0,440.6 1130.0,479.3 1081.5,507.3 1062.9,496.6 1092.9,457.9 1141.5,429.9" fill="white" stroke="black" stroke-width="1.5" />
-<text x="1530.0" y="410.0" text-anchor="middle" font-size="16">Dôme 10</text>
+<text x="1530.0" y="410.0" text-anchor="middle" font-size="16">Dome 10</text>
 <polygon points="1590.0,570.0 1560.0,622.0 1500.0,622.0 1470.0,570.0 1500.0,518.0 1560.0,518.0" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="1530.0" cy="570.0" r="7" fill="black" />
 <polygon points="1560.0,518.0 1500.0,518.0 1470.0,479.3 1500.0,440.6 1560.0,440.6 1590.0,479.3" fill="white" stroke="black" stroke-width="1.5" />
@@ -239,7 +239,7 @@
 <polygon points="1384.4,598.0 1384.4,542.0 1402.9,496.6 1421.5,507.3 1421.5,563.4 1402.9,608.7" fill="white" stroke="black" stroke-width="1.5" />
 <polygon points="1500.0,440.6 1470.0,479.3 1421.5,507.3 1402.9,496.6 1432.9,457.9 1481.5,429.9" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="1451.5" cy="468.6" r="7" fill="black" />
-<text x="170.0" y="790.0" text-anchor="middle" font-size="16">Dôme 11</text>
+<text x="170.0" y="790.0" text-anchor="middle" font-size="16">Dome 11</text>
 <polygon points="230.0,950.0 200.0,1002.0 140.0,1002.0 110.0,950.0 140.0,898.0 200.0,898.0" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="170.0" cy="950.0" r="7" fill="black" />
 <polygon points="200.0,898.0 140.0,898.0 110.0,859.3 140.0,820.6 200.0,820.6 230.0,859.3" fill="white" stroke="black" stroke-width="1.5" />
@@ -263,7 +263,7 @@
 <polygon points="24.4,978.0 24.4,922.0 42.9,876.6 61.5,887.3 61.5,943.4 42.9,988.7" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="42.9" cy="932.7" r="7" fill="black" />
 <polygon points="140.0,820.6 110.0,859.3 61.5,887.3 42.9,876.6 72.9,837.9 121.5,809.9" fill="white" stroke="black" stroke-width="1.5" />
-<text x="510.0" y="790.0" text-anchor="middle" font-size="16">Dôme 12</text>
+<text x="510.0" y="790.0" text-anchor="middle" font-size="16">Dome 12</text>
 <polygon points="570.0,950.0 540.0,1002.0 480.0,1002.0 450.0,950.0 480.0,898.0 540.0,898.0" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="510.0" cy="950.0" r="7" fill="black" />
 <polygon points="540.0,898.0 480.0,898.0 450.0,859.3 480.0,820.6 540.0,820.6 570.0,859.3" fill="white" stroke="black" stroke-width="1.5" />
@@ -287,7 +287,7 @@
 <polygon points="364.4,978.0 364.4,922.0 382.9,876.6 401.5,887.3 401.5,943.4 382.9,988.7" fill="white" stroke="black" stroke-width="1.5" />
 <polygon points="480.0,820.6 450.0,859.3 401.5,887.3 382.9,876.6 412.9,837.9 461.5,809.9" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="431.5" cy="848.6" r="7" fill="black" />
-<text x="850.0" y="790.0" text-anchor="middle" font-size="16">Dôme 13</text>
+<text x="850.0" y="790.0" text-anchor="middle" font-size="16">Dome 13</text>
 <polygon points="910.0,950.0 880.0,1002.0 820.0,1002.0 790.0,950.0 820.0,898.0 880.0,898.0" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="850.0" cy="950.0" r="7" fill="black" />
 <polygon points="880.0,898.0 820.0,898.0 790.0,859.3 820.0,820.6 880.0,820.6 910.0,859.3" fill="white" stroke="black" stroke-width="1.5" />
@@ -311,7 +311,7 @@
 <polygon points="704.4,978.0 704.4,922.0 722.9,876.6 741.5,887.3 741.5,943.4 722.9,988.7" fill="white" stroke="black" stroke-width="1.5" />
 <polygon points="820.0,820.6 790.0,859.3 741.5,887.3 722.9,876.6 752.9,837.9 801.5,809.9" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="771.5" cy="848.6" r="7" fill="black" />
-<text x="1190.0" y="790.0" text-anchor="middle" font-size="16">Dôme 14</text>
+<text x="1190.0" y="790.0" text-anchor="middle" font-size="16">Dome 14</text>
 <polygon points="1250.0,950.0 1220.0,1002.0 1160.0,1002.0 1130.0,950.0 1160.0,898.0 1220.0,898.0" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="1190.0" cy="950.0" r="7" fill="black" />
 <polygon points="1220.0,898.0 1160.0,898.0 1130.0,859.3 1160.0,820.6 1220.0,820.6 1250.0,859.3" fill="white" stroke="black" stroke-width="1.5" />
@@ -335,7 +335,7 @@
 <polygon points="1044.4,978.0 1044.4,922.0 1062.9,876.6 1081.5,887.3 1081.5,943.4 1062.9,988.7" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="1062.9" cy="932.7" r="7" fill="black" />
 <polygon points="1160.0,820.6 1130.0,859.3 1081.5,887.3 1062.9,876.6 1092.9,837.9 1141.5,809.9" fill="white" stroke="black" stroke-width="1.5" />
-<text x="1530.0" y="790.0" text-anchor="middle" font-size="16">Dôme 15</text>
+<text x="1530.0" y="790.0" text-anchor="middle" font-size="16">Dome 15</text>
 <polygon points="1590.0,950.0 1560.0,1002.0 1500.0,1002.0 1470.0,950.0 1500.0,898.0 1560.0,898.0" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="1530.0" cy="950.0" r="7" fill="black" />
 <polygon points="1560.0,898.0 1500.0,898.0 1470.0,859.3 1500.0,820.6 1560.0,820.6 1590.0,859.3" fill="white" stroke="black" stroke-width="1.5" />
@@ -359,7 +359,7 @@
 <polygon points="1384.4,978.0 1384.4,922.0 1402.9,876.6 1421.5,887.3 1421.5,943.4 1402.9,988.7" fill="white" stroke="black" stroke-width="1.5" />
 <polygon points="1500.0,820.6 1470.0,859.3 1421.5,887.3 1402.9,876.6 1432.9,837.9 1481.5,809.9" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="1451.5" cy="848.6" r="7" fill="black" />
-<text x="170.0" y="1170.0" text-anchor="middle" font-size="16">Dôme 16</text>
+<text x="170.0" y="1170.0" text-anchor="middle" font-size="16">Dome 16</text>
 <polygon points="230.0,1330.0 200.0,1382.0 140.0,1382.0 110.0,1330.0 140.0,1278.0 200.0,1278.0" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="170.0" cy="1330.0" r="7" fill="black" />
 <polygon points="200.0,1278.0 140.0,1278.0 110.0,1239.3 140.0,1200.6 200.0,1200.6 230.0,1239.3" fill="white" stroke="black" stroke-width="1.5" />
@@ -383,7 +383,7 @@
 <polygon points="24.4,1358.0 24.4,1302.0 42.9,1256.6 61.5,1267.3 61.5,1323.4 42.9,1368.7" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="42.9" cy="1312.7" r="7" fill="black" />
 <polygon points="140.0,1200.6 110.0,1239.3 61.5,1267.3 42.9,1256.6 72.9,1217.9 121.5,1189.9" fill="white" stroke="black" stroke-width="1.5" />
-<text x="510.0" y="1170.0" text-anchor="middle" font-size="16">Dôme 17</text>
+<text x="510.0" y="1170.0" text-anchor="middle" font-size="16">Dome 17</text>
 <polygon points="570.0,1330.0 540.0,1382.0 480.0,1382.0 450.0,1330.0 480.0,1278.0 540.0,1278.0" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="510.0" cy="1330.0" r="7" fill="black" />
 <polygon points="540.0,1278.0 480.0,1278.0 450.0,1239.3 480.0,1200.6 540.0,1200.6 570.0,1239.3" fill="white" stroke="black" stroke-width="1.5" />
@@ -407,7 +407,7 @@
 <polygon points="364.4,1358.0 364.4,1302.0 382.9,1256.6 401.5,1267.3 401.5,1323.4 382.9,1368.7" fill="white" stroke="black" stroke-width="1.5" />
 <polygon points="480.0,1200.6 450.0,1239.3 401.5,1267.3 382.9,1256.6 412.9,1217.9 461.5,1189.9" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="431.5" cy="1228.6" r="7" fill="black" />
-<text x="850.0" y="1170.0" text-anchor="middle" font-size="16">Dôme 18</text>
+<text x="850.0" y="1170.0" text-anchor="middle" font-size="16">Dome 18</text>
 <polygon points="910.0,1330.0 880.0,1382.0 820.0,1382.0 790.0,1330.0 820.0,1278.0 880.0,1278.0" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="850.0" cy="1330.0" r="7" fill="black" />
 <polygon points="880.0,1278.0 820.0,1278.0 790.0,1239.3 820.0,1200.6 880.0,1200.6 910.0,1239.3" fill="white" stroke="black" stroke-width="1.5" />
@@ -431,7 +431,7 @@
 <polygon points="704.4,1358.0 704.4,1302.0 722.9,1256.6 741.5,1267.3 741.5,1323.4 722.9,1368.7" fill="white" stroke="black" stroke-width="1.5" />
 <polygon points="820.0,1200.6 790.0,1239.3 741.5,1267.3 722.9,1256.6 752.9,1217.9 801.5,1189.9" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="771.5" cy="1228.6" r="7" fill="black" />
-<text x="1190.0" y="1170.0" text-anchor="middle" font-size="16">Dôme 19</text>
+<text x="1190.0" y="1170.0" text-anchor="middle" font-size="16">Dome 19</text>
 <polygon points="1250.0,1330.0 1220.0,1382.0 1160.0,1382.0 1130.0,1330.0 1160.0,1278.0 1220.0,1278.0" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="1190.0" cy="1330.0" r="7" fill="black" />
 <polygon points="1220.0,1278.0 1160.0,1278.0 1130.0,1239.3 1160.0,1200.6 1220.0,1200.6 1250.0,1239.3" fill="white" stroke="black" stroke-width="1.5" />
@@ -455,7 +455,7 @@
 <polygon points="1044.4,1358.0 1044.4,1302.0 1062.9,1256.6 1081.5,1267.3 1081.5,1323.4 1062.9,1368.7" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="1062.9" cy="1312.7" r="7" fill="black" />
 <polygon points="1160.0,1200.6 1130.0,1239.3 1081.5,1267.3 1062.9,1256.6 1092.9,1217.9 1141.5,1189.9" fill="white" stroke="black" stroke-width="1.5" />
-<text x="1530.0" y="1170.0" text-anchor="middle" font-size="16">Dôme 20</text>
+<text x="1530.0" y="1170.0" text-anchor="middle" font-size="16">Dome 20</text>
 <polygon points="1590.0,1330.0 1560.0,1382.0 1500.0,1382.0 1470.0,1330.0 1500.0,1278.0 1560.0,1278.0" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="1530.0" cy="1330.0" r="7" fill="black" />
 <polygon points="1560.0,1278.0 1500.0,1278.0 1470.0,1239.3 1500.0,1200.6 1560.0,1200.6 1590.0,1239.3" fill="white" stroke="black" stroke-width="1.5" />
@@ -479,7 +479,7 @@
 <polygon points="1384.4,1358.0 1384.4,1302.0 1402.9,1256.6 1421.5,1267.3 1421.5,1323.4 1402.9,1368.7" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="1402.9" cy="1312.7" r="7" fill="black" />
 <polygon points="1500.0,1200.6 1470.0,1239.3 1421.5,1267.3 1402.9,1256.6 1432.9,1217.9 1481.5,1189.9" fill="white" stroke="black" stroke-width="1.5" />
-<text x="170.0" y="1550.0" text-anchor="middle" font-size="16">Dôme 21</text>
+<text x="170.0" y="1550.0" text-anchor="middle" font-size="16">Dome 21</text>
 <polygon points="230.0,1710.0 200.0,1762.0 140.0,1762.0 110.0,1710.0 140.0,1658.0 200.0,1658.0" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="170.0" cy="1710.0" r="7" fill="black" />
 <polygon points="200.0,1658.0 140.0,1658.0 110.0,1619.3 140.0,1580.6 200.0,1580.6 230.0,1619.3" fill="white" stroke="black" stroke-width="1.5" />
@@ -503,7 +503,7 @@
 <polygon points="24.4,1738.0 24.4,1682.0 42.9,1636.6 61.5,1647.3 61.5,1703.4 42.9,1748.7" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="42.9" cy="1692.7" r="7" fill="black" />
 <polygon points="140.0,1580.6 110.0,1619.3 61.5,1647.3 42.9,1636.6 72.9,1597.9 121.5,1569.9" fill="white" stroke="black" stroke-width="1.5" />
-<text x="510.0" y="1550.0" text-anchor="middle" font-size="16">Dôme 22</text>
+<text x="510.0" y="1550.0" text-anchor="middle" font-size="16">Dome 22</text>
 <polygon points="570.0,1710.0 540.0,1762.0 480.0,1762.0 450.0,1710.0 480.0,1658.0 540.0,1658.0" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="510.0" cy="1710.0" r="7" fill="black" />
 <polygon points="540.0,1658.0 480.0,1658.0 450.0,1619.3 480.0,1580.6 540.0,1580.6 570.0,1619.3" fill="white" stroke="black" stroke-width="1.5" />
@@ -527,7 +527,7 @@
 <polygon points="364.4,1738.0 364.4,1682.0 382.9,1636.6 401.5,1647.3 401.5,1703.4 382.9,1748.7" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="382.9" cy="1692.7" r="7" fill="black" />
 <polygon points="480.0,1580.6 450.0,1619.3 401.5,1647.3 382.9,1636.6 412.9,1597.9 461.5,1569.9" fill="white" stroke="black" stroke-width="1.5" />
-<text x="850.0" y="1550.0" text-anchor="middle" font-size="16">Dôme 23</text>
+<text x="850.0" y="1550.0" text-anchor="middle" font-size="16">Dome 23</text>
 <polygon points="910.0,1710.0 880.0,1762.0 820.0,1762.0 790.0,1710.0 820.0,1658.0 880.0,1658.0" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="850.0" cy="1710.0" r="7" fill="black" />
 <polygon points="880.0,1658.0 820.0,1658.0 790.0,1619.3 820.0,1580.6 880.0,1580.6 910.0,1619.3" fill="white" stroke="black" stroke-width="1.5" />
@@ -551,7 +551,7 @@
 <polygon points="704.4,1738.0 704.4,1682.0 722.9,1636.6 741.5,1647.3 741.5,1703.4 722.9,1748.7" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="722.9" cy="1692.7" r="7" fill="black" />
 <polygon points="820.0,1580.6 790.0,1619.3 741.5,1647.3 722.9,1636.6 752.9,1597.9 801.5,1569.9" fill="white" stroke="black" stroke-width="1.5" />
-<text x="1190.0" y="1550.0" text-anchor="middle" font-size="16">Dôme 24</text>
+<text x="1190.0" y="1550.0" text-anchor="middle" font-size="16">Dome 24</text>
 <polygon points="1250.0,1710.0 1220.0,1762.0 1160.0,1762.0 1130.0,1710.0 1160.0,1658.0 1220.0,1658.0" fill="white" stroke="black" stroke-width="1.5" />
 <circle cx="1190.0" cy="1710.0" r="7" fill="black" />
 <polygon points="1220.0,1658.0 1160.0,1658.0 1130.0,1619.3 1160.0,1580.6 1220.0,1580.6 1250.0,1619.3" fill="white" stroke="black" stroke-width="1.5" />

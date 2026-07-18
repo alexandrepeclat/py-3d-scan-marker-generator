@@ -1,134 +1,131 @@
 # ============================================================
-# Générateur de dômes de référence pour scan 3D
+# Reference dome generator for 3D scanning
 # ============================================================
-# Basé sur : https://download.revopoint3d.com/support/download/accessories/marker-block-kit-quickstartguide-en-v1.1-20250117.pdf
-# Objectif :
-# Générer des répartitions de pastilles sur des dômes 3D
-# servant de points de référence pour un scanner.
+# Based on: https://download.revopoint3d.com/support/download/accessories/marker-block-kit-quickstartguide-en-v1.1-20250117.pdf
 #
-# Le dôme correspond à un demi-icosaèdre tronqué vu depuis
-# son sommet.
+# Goal:
+# Generate marker layouts on 3D domes used as reference points
+# for a scanner.
 #
-#
-# Nomenclature des faces :
-#
-# Vue depuis le dessus du dôme.
-# Pour chaque étage :
-#   - on commence par la face située à midi
-#   - puis on tourne dans le sens horaire
+# The dome is a truncated icosahedron, halved, viewed from its
+# apex.
 #
 #
-# Symboles :
+# Face naming:
 #
-#   h = face hexagone
-#   p = face pentagone
-#   x = face portant une pastille
-#
-#
-# Structure utilisée :
+# Viewed from above the dome.
+# For each tier:
+#   - start with the face at 12 o'clock
+#   - then move clockwise
 #
 #
-# Sommet (non affiché) :
+# Symbols:
+#
+#   h = hexagon face
+#   p = pentagon face
+#   x = face carrying a marker
+#
+#
+# Structure used:
+#
+#
+# Apex (not displayed):
 #
 #             h
 #             x
 #
-# Une pastille est toujours présente au sommet.
+# A marker is always present at the apex.
 #
 #
-# Milieu :
+# Middle tier:
 #
 #             h - p - h - p - h - p
 #             0       1       2
 #
-# Règle :
-#   exactement 2 des 3 hexagones du milieu reçoivent une
-#   pastille.
+# Rule:
+#   exactly 2 of the 3 middle hexagons carry a marker.
 #
 #
-# Bas :
+# Bottom tier:
 #
 #             p - h - h - p - h - h - p - h - h
 #             0   1 2   3   4 5   6   7 8
 #
-# Règle :
-#   - une pastille dans chaque groupe h-h
-#   - une pastille supplémentaire sur un pentagone
+# Rule:
+#   - one marker in each h-h group
+#   - one additional marker on a pentagon
 #
 #
-# Exemple :
+# Example:
 #
-# Milieu :
+# Middle tier:
 #
 #             x-p-h-p-x-p
 #
-# signifie :
-#             hexagone milieu 0 marqué
-#             hexagone milieu 1 vide
-#             hexagone milieu 2 marqué
+# means:
+#             middle hexagon 0 marked
+#             middle hexagon 1 empty
+#             middle hexagon 2 marked
 #
 #
-# Bas :
+# Bottom tier:
 #
 #             p-x-h-p-h-x-p-h-x
 #
-# signifie :
-#             groupe 1 : premier hexagone marqué
-#             groupe 2 : deuxième hexagone marqué
-#             groupe 3 : deuxième hexagone marqué
-#             + pentagone marqué
+# means:
+#             group 1: first hexagon marked
+#             group 2: second hexagon marked
+#             group 3: second hexagon marked
+#             + pentagon marked
 #
 #
-# Choix des dômes affichés :
+# Choosing which domes to display:
 #
-# Avec ces règles, il existe 72 configurations valides, soit
-# 24 dômes physiquement distincts une fois la symétrie de
-# rotation retirée (voir plus bas). Le programme n'affiche
-# jamais plus de dômes que nécessaire et les classe toujours
-# dans le même ordre (du "meilleur" au "moins bon"), selon 3
-# critères appliqués dans cet ordre :
+# With these rules, there are 72 valid configurations, i.e. 24
+# physically distinct domes once rotational symmetry is
+# removed (see below). The program never displays more domes
+# than requested, and always ranks them in the same order
+# (from "best" to "worst"), using 3 criteria applied in this
+# order:
 #
-#   1. Répartition des pastilles ("couverture") : plus petit
-#      écart angulaire maximal entre 2 pastilles consécutives
-#      autour du dôme. Objectif : qu'il n'y ait jamais un côté
-#      du dôme sans aucune pastille visible pendant un scan.
-#      Ce critère ne prend que quelques valeurs possibles (les
-#      dômes sont souvent à égalité).
+#   1. Marker spread ("coverage"): smallest maximum angular
+#      gap between 2 consecutive markers around the dome.
+#      Goal: no side of the dome should ever be left without a
+#      visible marker during a scan. This criterion only takes
+#      a handful of possible values (domes are often tied).
 #
-#   2. En cas d'égalité sur la couverture : distance mutuelle
-#      maximale avec les autres dômes déjà retenus dans ce même
-#      palier, pour obtenir des dômes qui se ressemblent le
-#      moins possible entre eux (voir plus bas).
+#   2. On a coverage tie: maximum mutual distance from the
+#      other domes already picked within that same tier, to
+#      get domes that look as different from each other as
+#      possible (see below).
 #
-#   3. Si toujours à égalité : ordre alphabétique du texte
-#      généré (ex : "h-p-x-p-x-p" / "p-h-x-p-x-h-x-x-h"), pour
-#      un résultat entièrement déterministe.
+#   3. If still tied: alphabetical order of the generated text
+#      (e.g. "h-p-x-p-x-p" / "p-h-x-p-x-h-x-x-h"), for a fully
+#      deterministic result.
 #
-# Cet ordre ne dépend jamais du nombre de dômes demandé (-n) :
-# les N premiers dômes affichés avec -n 10 sont toujours
-# exactement les N premiers d'un -n 20, etc.
+# This order never depends on the number of domes requested
+# (-n): the first N domes shown with -n 10 are always exactly
+# the first N of a -n 20, etc.
 #
 # ============================================================
-
-            
-        
-
 
 import argparse
 import math
 from itertools import combinations
 
+from mathutils import cross, dot, lerp, normalize, project_to_plane, scale, shared_edge, sub
+
 
 # ==============================
-# Paramètres
+# Parameters
 # ==============================
 
-_parser = argparse.ArgumentParser(description="Génère des dômes de référence pour scan 3D.")
+_parser = argparse.ArgumentParser(description="Generate reference domes for 3D scanning.")
 _parser.add_argument(
     "-n", "--nb-domes",
     type=int,
     default=10,
-    help="Nombre de dômes à générer (défaut : 10, max : 24 dômes physiquement distincts).",
+    help="Number of domes to generate (default: 10, max: 24 physically distinct domes).",
 )
 _args = _parser.parse_args()
 
@@ -136,25 +133,25 @@ NB_DOMES = _args.nb_domes
 
 
 # ==============================
-# Génération de toutes les
-# configurations valides
+# Generating all valid
+# configurations
 # ==============================
 #
-# Le dôme est composé de 3 "branches" identiques en
-# structure (1 hexagone du milieu + 1 groupe p-h-h du bas),
-# disposées avec une symétrie de rotation d'ordre 3.
+# The dome is made of 3 branches, identical in structure (1
+# middle hexagon + 1 p-h-h bottom group), arranged with 3-fold
+# rotational symmetry.
 #
-# Numéroter les branches 0/1/2 dépend uniquement d'où on
-# commence à lire le dôme : deux configurations qui sont des
-# rotations l'une de l'autre décrivent donc le MÊME dôme
-# physique. Pour choisir des dômes qui se ressemblent
-# vraiment le moins possible, il faut donc :
-#   1) dédupliquer par orbite de rotation (pas juste par
-#      tuple identique),
-#   2) parmi les dômes physiquement distincts, choisir ceux
-#      qui maximisent la distance mutuelle minimale, en
-#      tenant compte du fait que l'orientation relative de
-#      deux dômes n'est jamais connue à l'avance.
+# Numbering the branches 0/1/2 depends only on where you start
+# reading the dome: two configurations that are rotations of
+# each other describe the SAME physical dome. To pick domes
+# that truly look as different as possible, we therefore need
+# to:
+#   1) deduplicate by rotation orbit (not just identical
+#      tuples),
+#   2) among the physically distinct domes, pick the ones that
+#      maximize the minimum mutual distance, accounting for
+#      the fact that the relative orientation of two domes is
+#      never known in advance.
 
 def generate_all_configs():
 
@@ -190,7 +187,7 @@ def generate_all_configs():
 
 
 def rotate(config, k):
-    """Tourne le dôme de k branches (k dans 0, 1, 2)."""
+    # Rotate the dome by k branches (k in 0, 1, 2).
 
     middle, bottom = config
 
@@ -207,14 +204,14 @@ def rotate(config, k):
 
 
 def marked_vector(config):
-    """Vecteur binaire : 1 si la face porte une pastille."""
+    # Binary vector: 1 if the face carries a marker.
 
     middle, bottom = config
     return tuple(1 if v == "x" else 0 for v in middle + bottom)
 
 
 def canonical(config):
-    """Représentant unique de l'orbite de rotation d'un dôme."""
+    # Unique representative of a dome's rotation orbit.
 
     return min(rotate(config, k) for k in range(3))
 
@@ -224,12 +221,10 @@ def hamming(a, b):
 
 
 def orientation_free_distance(config_a, config_b):
-    """
-    Différence entre 2 dômes en tenant compte du fait que leur
-    orientation relative n'est pas connue à l'avance : on prend
-    la rotation qui les rapproche le plus, donc le pire cas de
-    confusion possible entre les deux.
-    """
+    # Difference between 2 domes, accounting for the fact that
+    # their relative orientation isn't known in advance: use
+    # whichever rotation brings them closest together, i.e. the
+    # worst-case mix-up between the two.
 
     va = marked_vector(config_a)
 
@@ -240,8 +235,8 @@ def orientation_free_distance(config_a, config_b):
 
 
 # ==============================
-# Sélection des dômes les plus
-# différents entre eux
+# Picking the domes that differ
+# the most from each other
 # ==============================
 
 def min_pairwise_distance(indices, dist):
@@ -249,33 +244,32 @@ def min_pairwise_distance(indices, dist):
 
 
 def rank_by_diversity(indices, dist):
-    """
-    Classe les dômes indiqués (indices dans distinct_configs, déjà
-    trié alphabétiquement) du plus au moins "utile" à garder, via
-    un ajout glouton par plus grande distance minimale
-    (farthest-point). Contrairement à une sélection optimisée pour
-    un NB_DOMES précis (avec échanges locaux), cet ordre ne dépend
-    pas du nombre final demandé : prendre les N premiers de ce
-    classement pour N=10 donne exactement les mêmes dômes que les
-    10 premiers d'un classement pour N=20. C'est ce qui garantit
-    que la sortie reste cohérente quand on change -n.
-
-    Aucun aléatoire : à distance égale, le dôme alphabétiquement
-    premier est toujours préféré (index le plus petit), ce qui
-    rend le résultat entièrement déterministe et reproductible.
-    """
+    # Ranks the given domes (indices into distinct_configs,
+    # already sorted alphabetically) from most to least "worth
+    # keeping", via greedy farthest-point insertion (always add
+    # the dome with the largest minimum distance to the ones
+    # already picked). Unlike a selection optimized for one
+    # specific NB_DOMES (with local swaps), this order doesn't
+    # depend on the final count requested: taking the first N of
+    # this ranking for N=10 gives exactly the same domes as the
+    # first 10 of a ranking for N=20. That's what keeps the
+    # output consistent when -n changes.
+    #
+    # No randomness: on a distance tie, the alphabetically first
+    # dome (smallest index) always wins, making the result fully
+    # deterministic and reproducible.
 
     ordered = sorted(indices)
 
     if len(ordered) <= 1:
         return ordered
 
-    # Amorce : la paire la plus éloignée
+    # Seed: the farthest pair
     i0, j0 = max(combinations(ordered, 2), key=lambda p: dist[p[0]][p[1]])
     order = [i0, j0]
 
-    # Ajout glouton : à chaque étape, le dôme qui maximise sa
-    # distance minimale aux dômes déjà classés
+    # Greedy growth: at each step, add the dome that maximizes
+    # its minimum distance to the domes already ranked
     while len(order) < len(ordered):
         remaining = [i for i in ordered if i not in order]
         next_index = max(
@@ -288,7 +282,7 @@ def rank_by_diversity(indices, dist):
 
 
 # ==============================
-# Format d'affichage
+# Display format
 # ==============================
 
 def format_dome(config):
@@ -302,18 +296,17 @@ def format_dome(config):
 
 
 # ==============================
-# Géométrie réelle du dôme (SVG)
+# Real dome geometry (SVG)
 # ==============================
-# Le dôme est un icosaèdre tronqué (ballon de foot) coupé en
-# 2 par un plan perpendiculaire à un axe passant par 2
-# hexagones opposés. On calcule ses vraies coordonnées 3D, on
-# garde la moitié supérieure (16 faces : 1 sommet + 6 milieu +
-# 9 bas) et on projette à plat, vue du dessus. Les faces
-# partagent réellement leurs arêtes (vraie tessellation, pas
-# une approximation), et le sommet, un hexagone du milieu et
-# son pentagone du bas sont toujours alignés en ligne droite
-# à midi (propriété géométrique exacte du solide, vérifiée
-# analytiquement).
+# The dome is a truncated icosahedron (soccer ball) cut in half
+# by a plane perpendicular to an axis through 2 opposite
+# hexagons. We compute its real 3D coordinates, keep the upper
+# half (16 faces: 1 apex + 6 middle + 9 bottom) and project it
+# flat, viewed from above. Faces genuinely share their edges
+# (real tessellation, not an approximation), and the apex, a
+# middle hexagon and its bottom pentagon are always aligned in
+# a straight line at 12 o'clock (an exact geometric property of
+# the solid, verified analytically).
 
 _PHI = (1 + 5 ** 0.5) / 2
 
@@ -331,52 +324,19 @@ _ICOSA_FACES = [
 ]
 
 
-def _v_sub(a, b):
-    return (a[0] - b[0], a[1] - b[1], a[2] - b[2])
-
-
-def _v_add(a, b):
-    return (a[0] + b[0], a[1] + b[1], a[2] + b[2])
-
-
-def _v_scale(a, s):
-    return (a[0] * s, a[1] * s, a[2] * s)
-
-
-def _v_lerp(a, b, t):
-    return _v_add(a, _v_scale(_v_sub(b, a), t))
-
-
-def _v_norm(a):
-    length = math.sqrt(a[0] ** 2 + a[1] ** 2 + a[2] ** 2)
-    return (a[0] / length, a[1] / length, a[2] / length)
-
-
-def _v_dot(a, b):
-    return a[0] * b[0] + a[1] * b[1] + a[2] * b[2]
-
-
-def _v_cross(a, b):
-    return (
-        a[1] * b[2] - a[2] * b[1],
-        a[2] * b[0] - a[0] * b[2],
-        a[0] * b[1] - a[1] * b[0],
-    )
-
-
 def _build_truncated_icosahedron():
-    """Troncature exacte : chaque triangle -> hexagone, chaque sommet -> pentagone."""
+    # Exact truncation: each triangle -> hexagon, each vertex -> pentagon.
 
     faces = {}
 
     for idx, (a, b, c) in enumerate(_ICOSA_FACES):
         A, B, C = _ICOSA_VERTICES[a], _ICOSA_VERTICES[b], _ICOSA_VERTICES[c]
         points = [
-            _v_lerp(A, B, 1 / 3), _v_lerp(A, B, 2 / 3),
-            _v_lerp(B, C, 1 / 3), _v_lerp(B, C, 2 / 3),
-            _v_lerp(C, A, 1 / 3), _v_lerp(C, A, 2 / 3),
+            lerp(A, B, 1 / 3), lerp(A, B, 2 / 3),
+            lerp(B, C, 1 / 3), lerp(B, C, 2 / 3),
+            lerp(C, A, 1 / 3), lerp(C, A, 2 / 3),
         ]
-        centroid = _v_norm(tuple(sum(p[k] for p in points) / 6 for k in range(3)))
+        centroid = normalize(tuple(sum(p[k] for p in points) / 6 for k in range(3)))
         faces[("h", idx)] = {"points": points, "centroid": centroid, "kind": "hex"}
 
     for vi in range(12):
@@ -387,68 +347,56 @@ def _build_truncated_icosahedron():
             for x in face if x != vi
         }
 
-        v_dir = _v_norm(V)
+        v_dir = normalize(V)
         ref = (1, 0, 0) if abs(v_dir[0]) < 0.9 else (0, 1, 0)
-        u = _v_norm(_v_cross(v_dir, ref))
-        w = _v_cross(v_dir, u)
+        u = normalize(cross(v_dir, ref))
+        w = cross(v_dir, u)
 
         by_angle = []
         for ni in neighbors:
-            point = _v_lerp(V, _ICOSA_VERTICES[ni], 1 / 3)
-            rel = _v_sub(point, V)
-            angle = math.atan2(_v_dot(rel, w), _v_dot(rel, u))
+            point = lerp(V, _ICOSA_VERTICES[ni], 1 / 3)
+            rel = sub(point, V)
+            angle = math.atan2(dot(rel, w), dot(rel, u))
             by_angle.append((angle, point))
         by_angle.sort(key=lambda t: t[0])
 
         points = [p for _, p in by_angle]
-        centroid = _v_norm(tuple(sum(p[k] for p in points) / 5 for k in range(3)))
+        centroid = normalize(tuple(sum(p[k] for p in points) / 5 for k in range(3)))
         faces[("p", vi)] = {"points": points, "centroid": centroid, "kind": "pent"}
 
     return faces
 
 
-def _shared_edge(face_a, face_b, precision=4):
-    def key(p):
-        return tuple(round(c, precision) for c in p)
-
-    pts_a = {key(p) for p in face_a["points"]}
-    pts_b = {key(p) for p in face_b["points"]}
-    return len(pts_a & pts_b) >= 2
-
-
 def _resolve_dome_geometry():
-    """
-    Choisit une face hexagone comme sommet, extrait les 16
-    faces de l'hémisphère (sommet + milieu + bas), et associe
-    chaque index de nos structures de données (middle[i],
-    bottom[i]) à sa vraie face géométrique, orientée pour
-    qu'un hexagone du milieu (et son pentagone du bas) soit
-    toujours à midi.
-    """
+    # Picks a hexagon face as the apex, extracts the 16 faces of
+    # the hemisphere (apex + middle + bottom), and maps each
+    # index of our data structures (middle[i], bottom[i]) to its
+    # real geometric face, oriented so that a middle hexagon
+    # (and its bottom pentagon) is always at 12 o'clock.
 
     faces = _build_truncated_icosahedron()
 
     apex_id = ("h", 0)
     pole = faces[apex_id]["centroid"]
 
-    ranked = sorted(faces, key=lambda fid: -_v_dot(faces[fid]["centroid"], pole))
+    ranked = sorted(faces, key=lambda fid: -dot(faces[fid]["centroid"], pole))
     hemisphere = set(ranked[:16])
 
     middle = {
         fid for fid in hemisphere
-        if fid != apex_id and _shared_edge(faces[apex_id], faces[fid])
+        if fid != apex_id and shared_edge(faces[apex_id]["points"], faces[fid]["points"])
     }
     bottom = hemisphere - {apex_id} - middle
     middle_hexagons = sorted(fid for fid in middle if fid[0] == "h")
 
     ref = (1, 0, 0) if abs(pole[0]) < 0.9 else (0, 1, 0)
-    u = _v_norm(_v_cross(pole, ref))
-    w = _v_cross(pole, u)
+    u = normalize(cross(pole, ref))
+    w = cross(pole, u)
 
     def raw_angle(fid):
         centroid = faces[fid]["centroid"]
-        rel = _v_sub(centroid, _v_scale(pole, _v_dot(centroid, pole)))
-        return math.atan2(_v_dot(rel, w), _v_dot(rel, u))
+        rel = sub(centroid, scale(pole, dot(centroid, pole)))
+        return math.atan2(dot(rel, w), dot(rel, u))
 
     theta0 = raw_angle(middle_hexagons[0])
 
@@ -458,22 +406,17 @@ def _resolve_dome_geometry():
 
     middle_order = sorted(middle, key=rel_angle)
 
-    # Un tri purement angulaire donne directement p-h-h-p-h-h-p-h-h en
-    # lecture horaire réelle (vérifié : le pentagone de chaque groupe
-    # est exactement aligné avec l'hexagone du milieu correspondant).
-    # Grouper plutôt par adjacence réelle avec l'hexagone du milieu
-    # donnerait un ordre h-p-h (le pentagone est entre ses 2 hexagones
-    # voisins, pas suivi par eux) : ça décale le texte par rapport au
-    # rendu visuel.
+    # A purely angular sort directly gives p-h-h-p-h-h-p-h-h in
+    # true clockwise reading (verified: each group's pentagon is
+    # exactly aligned with its corresponding middle hexagon).
+    # Grouping instead by real adjacency to the middle hexagon
+    # would give an h-p-h order (the pentagon sits between its 2
+    # neighboring hexagons, not followed by them): that would
+    # shift the text out of sync with the rendered image.
     bottom_order = sorted(bottom, key=rel_angle)
 
     def project(point, scale_factor):
-        rel = _v_sub(point, _v_scale(pole, _v_dot(point, pole)))
-        a = _v_dot(rel, u)
-        b = _v_dot(rel, w)
-        a2 = a * math.cos(theta0) + b * math.sin(theta0)
-        b2 = -a * math.sin(theta0) + b * math.cos(theta0)
-        return (b2 * scale_factor, -a2 * scale_factor)
+        return project_to_plane(point, pole, u, w, rotation=theta0, scale_factor=scale_factor)
 
     slots: dict = {"apex": apex_id}
     for j, fid in enumerate(middle_order):
@@ -481,9 +424,9 @@ def _resolve_dome_geometry():
     for j, fid in enumerate(bottom_order):
         slots[("bottom", j)] = fid
 
-    # Azimut (degrés, 0 = midi, sens horaire) de chaque slot, hors
-    # sommet qui n'a pas d'azimut significatif (il est au pôle).
-    # Réutilisé pour évaluer la répartition des pastilles.
+    # Azimuth (degrees, 0 = 12 o'clock, clockwise) of each slot,
+    # excluding the apex which has no meaningful azimuth (it
+    # sits at the pole). Reused to evaluate marker spread.
     slot_azimuth = {
         key: math.degrees(rel_angle(fid))
         for key, fid in slots.items()
@@ -497,7 +440,7 @@ _DOME_FACES, _DOME_SLOTS, _project, _SLOT_AZIMUTH = _resolve_dome_geometry()
 
 
 def marked_slots(config):
-    """Slot -> pastille présente ou non, pour ce dôme."""
+    # Slot -> marker present or not, for this dome.
 
     middle, bottom = config
 
@@ -512,14 +455,12 @@ def marked_slots(config):
 
 
 def coverage_score(config):
-    """
-    Plus grand écart angulaire (degrés, autour du pôle) entre 2
-    pastilles consécutives, hors sommet (toujours marqué, sans
-    azimut significatif puisqu'il est au pôle). Un grand écart
-    = un angle de vue latéral sans aucune pastille visible.
-    Plus la valeur est petite, mieux les pastilles sont
-    réparties tout autour du dôme.
-    """
+    # Largest angular gap (degrees, around the pole) between 2
+    # consecutive markers, excluding the apex (always marked,
+    # with no meaningful azimuth since it sits at the pole). A
+    # large gap means a side viewing angle with no marker
+    # visible at all. The smaller the value, the more evenly the
+    # markers are spread around the dome.
 
     marks = marked_slots(config)
     azimuths = sorted(
@@ -535,7 +476,7 @@ def coverage_score(config):
     return max(gaps)
 
 
-def dome_svg(config, cx, cy, scale=90):
+def dome_svg(config, cx, cy, scale_factor=90):
     marks = marked_slots(config)
 
     parts = []
@@ -543,15 +484,16 @@ def dome_svg(config, cx, cy, scale=90):
     for slot, face_id in _DOME_SLOTS.items():
         face = _DOME_FACES[face_id]
 
-        projected = [_project(p, scale) for p in face["points"]]
+        projected = [_project(p, scale_factor) for p in face["points"]]
         points = " ".join(f"{cx + x:.1f},{cy + y:.1f}" for x, y in projected)
         parts.append(f'<polygon points="{points}" fill="white" stroke="black" stroke-width="1.5" />')
 
         if marks[slot]:
-            # Centre du disque = moyenne des points déjà projetés du
-            # polygone (et non le centroïde 3D, normalisé sur la
-            # sphère unité donc à une échelle différente des points
-            # du polygone, ce qui décalait le disque hors de la face).
+            # Disc center = average of the polygon's already
+            # projected points (not the 3D centroid, which is
+            # normalized onto the unit sphere and therefore at a
+            # different scale than the polygon's own points,
+            # which used to push the disc off the face).
             px = sum(x for x, _ in projected) / len(projected)
             py = sum(y for _, y in projected) / len(projected)
             parts.append(f'<circle cx="{cx + px:.1f}" cy="{cy + py:.1f}" r="7" fill="black" />')
@@ -564,7 +506,7 @@ def build_domes_svg(domes, path):
     cell_w, cell_h = 340, 380
     center_y_local = 190
 
-    rows = -(-len(domes) // cols)  # division entière arrondie au sup.
+    rows = -(-len(domes) // cols)  # ceiling division
     width = cols * cell_w
     height = rows * cell_h
 
@@ -582,7 +524,7 @@ def build_domes_svg(domes, path):
 
         svg_parts.append(
             f'<text x="{cx:.1f}" y="{cy - 160:.1f}" text-anchor="middle" '
-            f'font-size="16">Dôme {index + 1}</text>'
+            f'font-size="16">Dome {index + 1}</text>'
         )
         svg_parts.append(dome_svg(dome, cx, cy))
 
@@ -593,7 +535,7 @@ def build_domes_svg(domes, path):
 
 
 # ==============================
-# Génération
+# Generation
 # ==============================
 
 all_configs = generate_all_configs()
@@ -601,8 +543,8 @@ distinct_configs = sorted({canonical(c) for c in all_configs})
 
 if NB_DOMES > len(distinct_configs):
     raise ValueError(
-        f"NB_DOMES={NB_DOMES} dépasse le nombre de dômes "
-        f"réellement distincts ({len(distinct_configs)})."
+        f"NB_DOMES={NB_DOMES} exceeds the number of physically "
+        f"distinct domes ({len(distinct_configs)})."
     )
 
 n = len(distinct_configs)
@@ -614,9 +556,9 @@ dist = [
     for i in range(n)
 ]
 
-# Tri final : d'abord par palier de répartition (couverture), puis
-# par distance à l'intérieur d'un palier, puis alphabétiquement en
-# dernier recours (voir le commentaire en tête de fichier).
+# Final sort: first by coverage tier, then by distance within a
+# tier, then alphabetically as a last resort (see the comment at
+# the top of the file).
 coverage = [round(coverage_score(cfg), 6) for cfg in distinct_configs]
 
 tiers: list = []
@@ -635,17 +577,17 @@ domes = [distinct_configs[i] for i in selected_indices]
 
 
 # ==============================
-# Affichage final
+# Final display
 # ==============================
 
 print(
-    f"{len(all_configs)} configurations valides, "
-    f"{len(distinct_configs)} dômes physiquement distincts "
-    f"(symétrie de rotation)."
+    f"{len(all_configs)} valid configurations, "
+    f"{len(distinct_configs)} physically distinct domes "
+    f"(rotational symmetry)."
 )
 print(
-    f"Distance minimale garantie entre les {NB_DOMES} dômes "
-    f"choisis : {min_pairwise_distance(selected_indices, dist)} faces."
+    f"Guaranteed minimum distance across the {NB_DOMES} chosen "
+    f"domes: {min_pairwise_distance(selected_indices, dist)} faces."
 )
 print()
 
@@ -653,19 +595,18 @@ for number, dome in enumerate(domes, 1):
 
     middle, bottom = format_dome(dome)
 
-    print(f"Dôme {number}")
+    print(f"Dome {number}")
     print(middle)
     print(bottom)
     print()
 
 
 # ==============================
-# Matrice des distances
+# Distance matrix
 # ==============================
-# Distance = nb de faces dont l'état (avec/sans pastille)
-# diffère, dans le pire cas d'alignement relatif (cf.
-# orientation_free_distance). Plus c'est élevé, moins les
-# deux dômes risquent d'être confondus.
+# Distance = number of faces whose marked state differs, in the
+# worst-case relative alignment (see orientation_free_distance).
+# The higher, the less likely the two domes are to be confused.
 
 header = "     " + "".join(f"{j + 1:>4}" for j in range(NB_DOMES))
 print(header)
@@ -679,11 +620,11 @@ for row, i in enumerate(selected_indices, 1):
 
 
 # ==============================
-# Export graphique
+# Graphical export
 # ==============================
 
 svg_path = "domes.svg"
 build_domes_svg(domes, svg_path)
 
 print()
-print(f"Représentation graphique : {svg_path}")
+print(f"Graphical representation: {svg_path}")
