@@ -124,12 +124,12 @@ _parser = argparse.ArgumentParser(description="Generate reference domes for 3D s
 _parser.add_argument(
     "-n", "--nb-domes",
     type=int,
-    default=10,
-    help="Number of domes to generate (default: 10, max: 24 physically distinct domes).",
+    default=None,
+    help="Number of domes to generate (default: all 24 physically distinct domes).",
 )
 _args = _parser.parse_args()
 
-NB_DOMES = _args.nb_domes
+NB_DOMES = _args.nb_domes  # resolved to the max once distinct_configs is known
 
 
 # ==============================
@@ -541,7 +541,9 @@ def build_domes_svg(domes, path):
 all_configs = generate_all_configs()
 distinct_configs = sorted({canonical(c) for c in all_configs})
 
-if NB_DOMES > len(distinct_configs):
+if NB_DOMES is None:
+    NB_DOMES = len(distinct_configs)
+elif NB_DOMES > len(distinct_configs):
     raise ValueError(
         f"NB_DOMES={NB_DOMES} exceeds the number of physically "
         f"distinct domes ({len(distinct_configs)})."
