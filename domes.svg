@@ -1,0 +1,242 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="760" viewBox="0 0 1700 760" font-family="sans-serif">
+<text x="170.0" y="30.0" text-anchor="middle" font-size="16">Dôme 1</text>
+<polygon points="230.0,190.0 200.0,242.0 140.0,242.0 110.0,190.0 140.0,138.0 200.0,138.0" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="170.0" cy="190.0" r="7" fill="black" />
+<polygon points="200.0,138.0 140.0,138.0 110.0,99.3 140.0,60.6 200.0,60.6 230.0,99.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="200.0,138.0 230.0,99.3 278.5,127.3 278.5,183.4 230.0,190.0" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="278.5,183.4 297.1,228.7 267.1,280.7 218.5,287.3 200.0,242.0 230.0,190.0" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="248.5" cy="235.3" r="7" fill="black" />
+<polygon points="121.5,287.3 140.0,242.0 200.0,242.0 218.5,287.3 170.0,315.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="110.0,190.0 140.0,242.0 121.5,287.3 72.9,280.7 42.9,228.7 61.5,183.4" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="91.5" cy="235.3" r="7" fill="black" />
+<polygon points="61.5,127.3 110.0,99.3 140.0,138.0 110.0,190.0 61.5,183.4" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="121.5,49.9 170.0,43.3 218.5,49.9 200.0,60.6 140.0,60.6" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="230.0,99.3 200.0,60.6 218.5,49.9 267.1,77.9 297.1,116.6 278.5,127.3" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="248.5" cy="88.6" r="7" fill="black" />
+<polygon points="278.5,127.3 297.1,116.6 315.6,162.0 315.6,218.0 297.1,228.7 278.5,183.4" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="315.6,218.0 297.1,263.4 267.1,302.1 267.1,280.7 297.1,228.7" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="288.8" cy="258.6" r="7" fill="black" />
+<polygon points="218.5,287.3 267.1,280.7 267.1,302.1 218.5,330.1 170.0,336.7 170.0,315.3" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="218.5" cy="308.7" r="7" fill="black" />
+<polygon points="121.5,330.1 72.9,302.1 72.9,280.7 121.5,287.3 170.0,315.3 170.0,336.7" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="42.9,263.4 24.4,218.0 42.9,228.7 72.9,280.7 72.9,302.1" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="24.4,218.0 24.4,162.0 42.9,116.6 61.5,127.3 61.5,183.4 42.9,228.7" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="42.9" cy="172.7" r="7" fill="black" />
+<polygon points="140.0,60.6 110.0,99.3 61.5,127.3 42.9,116.6 72.9,77.9 121.5,49.9" fill="white" stroke="black" stroke-width="1.5" />
+<text x="510.0" y="30.0" text-anchor="middle" font-size="16">Dôme 2</text>
+<polygon points="570.0,190.0 540.0,242.0 480.0,242.0 450.0,190.0 480.0,138.0 540.0,138.0" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="510.0" cy="190.0" r="7" fill="black" />
+<polygon points="540.0,138.0 480.0,138.0 450.0,99.3 480.0,60.6 540.0,60.6 570.0,99.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="540.0,138.0 570.0,99.3 618.5,127.3 618.5,183.4 570.0,190.0" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="618.5,183.4 637.1,228.7 607.1,280.7 558.5,287.3 540.0,242.0 570.0,190.0" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="588.5" cy="235.3" r="7" fill="black" />
+<polygon points="461.5,287.3 480.0,242.0 540.0,242.0 558.5,287.3 510.0,315.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="450.0,190.0 480.0,242.0 461.5,287.3 412.9,280.7 382.9,228.7 401.5,183.4" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="431.5" cy="235.3" r="7" fill="black" />
+<polygon points="401.5,127.3 450.0,99.3 480.0,138.0 450.0,190.0 401.5,183.4" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="461.5,49.9 510.0,43.3 558.5,49.9 540.0,60.6 480.0,60.6" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="510.0" cy="52.8" r="7" fill="black" />
+<polygon points="570.0,99.3 540.0,60.6 558.5,49.9 607.1,77.9 637.1,116.6 618.5,127.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="618.5,127.3 637.1,116.6 655.6,162.0 655.6,218.0 637.1,228.7 618.5,183.4" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="637.1" cy="172.7" r="7" fill="black" />
+<polygon points="655.6,218.0 637.1,263.4 607.1,302.1 607.1,280.7 637.1,228.7" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="558.5,287.3 607.1,280.7 607.1,302.1 558.5,330.1 510.0,336.7 510.0,315.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="461.5,330.1 412.9,302.1 412.9,280.7 461.5,287.3 510.0,315.3 510.0,336.7" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="461.5" cy="308.7" r="7" fill="black" />
+<polygon points="382.9,263.4 364.4,218.0 382.9,228.7 412.9,280.7 412.9,302.1" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="364.4,218.0 364.4,162.0 382.9,116.6 401.5,127.3 401.5,183.4 382.9,228.7" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="480.0,60.6 450.0,99.3 401.5,127.3 382.9,116.6 412.9,77.9 461.5,49.9" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="431.5" cy="88.6" r="7" fill="black" />
+<text x="850.0" y="30.0" text-anchor="middle" font-size="16">Dôme 3</text>
+<polygon points="910.0,190.0 880.0,242.0 820.0,242.0 790.0,190.0 820.0,138.0 880.0,138.0" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="850.0" cy="190.0" r="7" fill="black" />
+<polygon points="880.0,138.0 820.0,138.0 790.0,99.3 820.0,60.6 880.0,60.6 910.0,99.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="880.0,138.0 910.0,99.3 958.5,127.3 958.5,183.4 910.0,190.0" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="958.5,183.4 977.1,228.7 947.1,280.7 898.5,287.3 880.0,242.0 910.0,190.0" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="928.5" cy="235.3" r="7" fill="black" />
+<polygon points="801.5,287.3 820.0,242.0 880.0,242.0 898.5,287.3 850.0,315.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="790.0,190.0 820.0,242.0 801.5,287.3 752.9,280.7 722.9,228.7 741.5,183.4" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="771.5" cy="235.3" r="7" fill="black" />
+<polygon points="741.5,127.3 790.0,99.3 820.0,138.0 790.0,190.0 741.5,183.4" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="801.5,49.9 850.0,43.3 898.5,49.9 880.0,60.6 820.0,60.6" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="910.0,99.3 880.0,60.6 898.5,49.9 947.1,77.9 977.1,116.6 958.5,127.3" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="928.5" cy="88.6" r="7" fill="black" />
+<polygon points="958.5,127.3 977.1,116.6 995.6,162.0 995.6,218.0 977.1,228.7 958.5,183.4" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="995.6,218.0 977.1,263.4 947.1,302.1 947.1,280.7 977.1,228.7" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="968.8" cy="258.6" r="7" fill="black" />
+<polygon points="898.5,287.3 947.1,280.7 947.1,302.1 898.5,330.1 850.0,336.7 850.0,315.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="801.5,330.1 752.9,302.1 752.9,280.7 801.5,287.3 850.0,315.3 850.0,336.7" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="801.5" cy="308.7" r="7" fill="black" />
+<polygon points="722.9,263.4 704.4,218.0 722.9,228.7 752.9,280.7 752.9,302.1" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="704.4,218.0 704.4,162.0 722.9,116.6 741.5,127.3 741.5,183.4 722.9,228.7" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="820.0,60.6 790.0,99.3 741.5,127.3 722.9,116.6 752.9,77.9 801.5,49.9" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="771.5" cy="88.6" r="7" fill="black" />
+<text x="1190.0" y="30.0" text-anchor="middle" font-size="16">Dôme 4</text>
+<polygon points="1250.0,190.0 1220.0,242.0 1160.0,242.0 1130.0,190.0 1160.0,138.0 1220.0,138.0" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1190.0" cy="190.0" r="7" fill="black" />
+<polygon points="1220.0,138.0 1160.0,138.0 1130.0,99.3 1160.0,60.6 1220.0,60.6 1250.0,99.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1220.0,138.0 1250.0,99.3 1298.5,127.3 1298.5,183.4 1250.0,190.0" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1298.5,183.4 1317.1,228.7 1287.1,280.7 1238.5,287.3 1220.0,242.0 1250.0,190.0" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1268.5" cy="235.3" r="7" fill="black" />
+<polygon points="1141.5,287.3 1160.0,242.0 1220.0,242.0 1238.5,287.3 1190.0,315.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1130.0,190.0 1160.0,242.0 1141.5,287.3 1092.9,280.7 1062.9,228.7 1081.5,183.4" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1111.5" cy="235.3" r="7" fill="black" />
+<polygon points="1081.5,127.3 1130.0,99.3 1160.0,138.0 1130.0,190.0 1081.5,183.4" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1141.5,49.9 1190.0,43.3 1238.5,49.9 1220.0,60.6 1160.0,60.6" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1250.0,99.3 1220.0,60.6 1238.5,49.9 1287.1,77.9 1317.1,116.6 1298.5,127.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1298.5,127.3 1317.1,116.6 1335.6,162.0 1335.6,218.0 1317.1,228.7 1298.5,183.4" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1317.1" cy="172.7" r="7" fill="black" />
+<polygon points="1335.6,218.0 1317.1,263.4 1287.1,302.1 1287.1,280.7 1317.1,228.7" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1238.5,287.3 1287.1,280.7 1287.1,302.1 1238.5,330.1 1190.0,336.7 1190.0,315.3" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1238.5" cy="308.7" r="7" fill="black" />
+<polygon points="1141.5,330.1 1092.9,302.1 1092.9,280.7 1141.5,287.3 1190.0,315.3 1190.0,336.7" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1062.9,263.4 1044.4,218.0 1062.9,228.7 1092.9,280.7 1092.9,302.1" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1071.2" cy="258.6" r="7" fill="black" />
+<polygon points="1044.4,218.0 1044.4,162.0 1062.9,116.6 1081.5,127.3 1081.5,183.4 1062.9,228.7" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1062.9" cy="172.7" r="7" fill="black" />
+<polygon points="1160.0,60.6 1130.0,99.3 1081.5,127.3 1062.9,116.6 1092.9,77.9 1141.5,49.9" fill="white" stroke="black" stroke-width="1.5" />
+<text x="1530.0" y="30.0" text-anchor="middle" font-size="16">Dôme 5</text>
+<polygon points="1590.0,190.0 1560.0,242.0 1500.0,242.0 1470.0,190.0 1500.0,138.0 1560.0,138.0" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1530.0" cy="190.0" r="7" fill="black" />
+<polygon points="1560.0,138.0 1500.0,138.0 1470.0,99.3 1500.0,60.6 1560.0,60.6 1590.0,99.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1560.0,138.0 1590.0,99.3 1638.5,127.3 1638.5,183.4 1590.0,190.0" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1638.5,183.4 1657.1,228.7 1627.1,280.7 1578.5,287.3 1560.0,242.0 1590.0,190.0" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1608.5" cy="235.3" r="7" fill="black" />
+<polygon points="1481.5,287.3 1500.0,242.0 1560.0,242.0 1578.5,287.3 1530.0,315.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1470.0,190.0 1500.0,242.0 1481.5,287.3 1432.9,280.7 1402.9,228.7 1421.5,183.4" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1451.5" cy="235.3" r="7" fill="black" />
+<polygon points="1421.5,127.3 1470.0,99.3 1500.0,138.0 1470.0,190.0 1421.5,183.4" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1481.5,49.9 1530.0,43.3 1578.5,49.9 1560.0,60.6 1500.0,60.6" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1530.0" cy="52.8" r="7" fill="black" />
+<polygon points="1590.0,99.3 1560.0,60.6 1578.5,49.9 1627.1,77.9 1657.1,116.6 1638.5,127.3" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1608.5" cy="88.6" r="7" fill="black" />
+<polygon points="1638.5,127.3 1657.1,116.6 1675.6,162.0 1675.6,218.0 1657.1,228.7 1638.5,183.4" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1675.6,218.0 1657.1,263.4 1627.1,302.1 1627.1,280.7 1657.1,228.7" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1578.5,287.3 1627.1,280.7 1627.1,302.1 1578.5,330.1 1530.0,336.7 1530.0,315.3" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1578.5" cy="308.7" r="7" fill="black" />
+<polygon points="1481.5,330.1 1432.9,302.1 1432.9,280.7 1481.5,287.3 1530.0,315.3 1530.0,336.7" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1402.9,263.4 1384.4,218.0 1402.9,228.7 1432.9,280.7 1432.9,302.1" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1384.4,218.0 1384.4,162.0 1402.9,116.6 1421.5,127.3 1421.5,183.4 1402.9,228.7" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1500.0,60.6 1470.0,99.3 1421.5,127.3 1402.9,116.6 1432.9,77.9 1481.5,49.9" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1451.5" cy="88.6" r="7" fill="black" />
+<text x="170.0" y="410.0" text-anchor="middle" font-size="16">Dôme 6</text>
+<polygon points="230.0,570.0 200.0,622.0 140.0,622.0 110.0,570.0 140.0,518.0 200.0,518.0" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="170.0" cy="570.0" r="7" fill="black" />
+<polygon points="200.0,518.0 140.0,518.0 110.0,479.3 140.0,440.6 200.0,440.6 230.0,479.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="200.0,518.0 230.0,479.3 278.5,507.3 278.5,563.4 230.0,570.0" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="278.5,563.4 297.1,608.7 267.1,660.7 218.5,667.3 200.0,622.0 230.0,570.0" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="248.5" cy="615.3" r="7" fill="black" />
+<polygon points="121.5,667.3 140.0,622.0 200.0,622.0 218.5,667.3 170.0,695.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="110.0,570.0 140.0,622.0 121.5,667.3 72.9,660.7 42.9,608.7 61.5,563.4" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="91.5" cy="615.3" r="7" fill="black" />
+<polygon points="61.5,507.3 110.0,479.3 140.0,518.0 110.0,570.0 61.5,563.4" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="121.5,429.9 170.0,423.3 218.5,429.9 200.0,440.6 140.0,440.6" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="230.0,479.3 200.0,440.6 218.5,429.9 267.1,457.9 297.1,496.6 278.5,507.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="278.5,507.3 297.1,496.6 315.6,542.0 315.6,598.0 297.1,608.7 278.5,563.4" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="297.1" cy="552.7" r="7" fill="black" />
+<polygon points="315.6,598.0 297.1,643.4 267.1,682.1 267.1,660.7 297.1,608.7" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="288.8" cy="638.6" r="7" fill="black" />
+<polygon points="218.5,667.3 267.1,660.7 267.1,682.1 218.5,710.1 170.0,716.7 170.0,695.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="121.5,710.1 72.9,682.1 72.9,660.7 121.5,667.3 170.0,695.3 170.0,716.7" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="121.5" cy="688.7" r="7" fill="black" />
+<polygon points="42.9,643.4 24.4,598.0 42.9,608.7 72.9,660.7 72.9,682.1" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="24.4,598.0 24.4,542.0 42.9,496.6 61.5,507.3 61.5,563.4 42.9,608.7" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="42.9" cy="552.7" r="7" fill="black" />
+<polygon points="140.0,440.6 110.0,479.3 61.5,507.3 42.9,496.6 72.9,457.9 121.5,429.9" fill="white" stroke="black" stroke-width="1.5" />
+<text x="510.0" y="410.0" text-anchor="middle" font-size="16">Dôme 7</text>
+<polygon points="570.0,570.0 540.0,622.0 480.0,622.0 450.0,570.0 480.0,518.0 540.0,518.0" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="510.0" cy="570.0" r="7" fill="black" />
+<polygon points="540.0,518.0 480.0,518.0 450.0,479.3 480.0,440.6 540.0,440.6 570.0,479.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="540.0,518.0 570.0,479.3 618.5,507.3 618.5,563.4 570.0,570.0" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="618.5,563.4 637.1,608.7 607.1,660.7 558.5,667.3 540.0,622.0 570.0,570.0" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="588.5" cy="615.3" r="7" fill="black" />
+<polygon points="461.5,667.3 480.0,622.0 540.0,622.0 558.5,667.3 510.0,695.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="450.0,570.0 480.0,622.0 461.5,667.3 412.9,660.7 382.9,608.7 401.5,563.4" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="431.5" cy="615.3" r="7" fill="black" />
+<polygon points="401.5,507.3 450.0,479.3 480.0,518.0 450.0,570.0 401.5,563.4" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="461.5,429.9 510.0,423.3 558.5,429.9 540.0,440.6 480.0,440.6" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="570.0,479.3 540.0,440.6 558.5,429.9 607.1,457.9 637.1,496.6 618.5,507.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="618.5,507.3 637.1,496.6 655.6,542.0 655.6,598.0 637.1,608.7 618.5,563.4" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="637.1" cy="552.7" r="7" fill="black" />
+<polygon points="655.6,598.0 637.1,643.4 607.1,682.1 607.1,660.7 637.1,608.7" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="628.8" cy="638.6" r="7" fill="black" />
+<polygon points="558.5,667.3 607.1,660.7 607.1,682.1 558.5,710.1 510.0,716.7 510.0,695.3" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="558.5" cy="688.7" r="7" fill="black" />
+<polygon points="461.5,710.1 412.9,682.1 412.9,660.7 461.5,667.3 510.0,695.3 510.0,716.7" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="382.9,643.4 364.4,598.0 382.9,608.7 412.9,660.7 412.9,682.1" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="364.4,598.0 364.4,542.0 382.9,496.6 401.5,507.3 401.5,563.4 382.9,608.7" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="480.0,440.6 450.0,479.3 401.5,507.3 382.9,496.6 412.9,457.9 461.5,429.9" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="431.5" cy="468.6" r="7" fill="black" />
+<text x="850.0" y="410.0" text-anchor="middle" font-size="16">Dôme 8</text>
+<polygon points="910.0,570.0 880.0,622.0 820.0,622.0 790.0,570.0 820.0,518.0 880.0,518.0" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="850.0" cy="570.0" r="7" fill="black" />
+<polygon points="880.0,518.0 820.0,518.0 790.0,479.3 820.0,440.6 880.0,440.6 910.0,479.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="880.0,518.0 910.0,479.3 958.5,507.3 958.5,563.4 910.0,570.0" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="958.5,563.4 977.1,608.7 947.1,660.7 898.5,667.3 880.0,622.0 910.0,570.0" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="928.5" cy="615.3" r="7" fill="black" />
+<polygon points="801.5,667.3 820.0,622.0 880.0,622.0 898.5,667.3 850.0,695.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="790.0,570.0 820.0,622.0 801.5,667.3 752.9,660.7 722.9,608.7 741.5,563.4" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="771.5" cy="615.3" r="7" fill="black" />
+<polygon points="741.5,507.3 790.0,479.3 820.0,518.0 790.0,570.0 741.5,563.4" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="801.5,429.9 850.0,423.3 898.5,429.9 880.0,440.6 820.0,440.6" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="910.0,479.3 880.0,440.6 898.5,429.9 947.1,457.9 977.1,496.6 958.5,507.3" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="928.5" cy="468.6" r="7" fill="black" />
+<polygon points="958.5,507.3 977.1,496.6 995.6,542.0 995.6,598.0 977.1,608.7 958.5,563.4" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="995.6,598.0 977.1,643.4 947.1,682.1 947.1,660.7 977.1,608.7" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="968.8" cy="638.6" r="7" fill="black" />
+<polygon points="898.5,667.3 947.1,660.7 947.1,682.1 898.5,710.1 850.0,716.7 850.0,695.3" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="898.5" cy="688.7" r="7" fill="black" />
+<polygon points="801.5,710.1 752.9,682.1 752.9,660.7 801.5,667.3 850.0,695.3 850.0,716.7" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="722.9,643.4 704.4,598.0 722.9,608.7 752.9,660.7 752.9,682.1" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="704.4,598.0 704.4,542.0 722.9,496.6 741.5,507.3 741.5,563.4 722.9,608.7" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="820.0,440.6 790.0,479.3 741.5,507.3 722.9,496.6 752.9,457.9 801.5,429.9" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="771.5" cy="468.6" r="7" fill="black" />
+<text x="1190.0" y="410.0" text-anchor="middle" font-size="16">Dôme 9</text>
+<polygon points="1250.0,570.0 1220.0,622.0 1160.0,622.0 1130.0,570.0 1160.0,518.0 1220.0,518.0" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1190.0" cy="570.0" r="7" fill="black" />
+<polygon points="1220.0,518.0 1160.0,518.0 1130.0,479.3 1160.0,440.6 1220.0,440.6 1250.0,479.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1220.0,518.0 1250.0,479.3 1298.5,507.3 1298.5,563.4 1250.0,570.0" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1298.5,563.4 1317.1,608.7 1287.1,660.7 1238.5,667.3 1220.0,622.0 1250.0,570.0" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1268.5" cy="615.3" r="7" fill="black" />
+<polygon points="1141.5,667.3 1160.0,622.0 1220.0,622.0 1238.5,667.3 1190.0,695.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1130.0,570.0 1160.0,622.0 1141.5,667.3 1092.9,660.7 1062.9,608.7 1081.5,563.4" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1111.5" cy="615.3" r="7" fill="black" />
+<polygon points="1081.5,507.3 1130.0,479.3 1160.0,518.0 1130.0,570.0 1081.5,563.4" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1141.5,429.9 1190.0,423.3 1238.5,429.9 1220.0,440.6 1160.0,440.6" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1250.0,479.3 1220.0,440.6 1238.5,429.9 1287.1,457.9 1317.1,496.6 1298.5,507.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1298.5,507.3 1317.1,496.6 1335.6,542.0 1335.6,598.0 1317.1,608.7 1298.5,563.4" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1317.1" cy="552.7" r="7" fill="black" />
+<polygon points="1335.6,598.0 1317.1,643.4 1287.1,682.1 1287.1,660.7 1317.1,608.7" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1308.8" cy="638.6" r="7" fill="black" />
+<polygon points="1238.5,667.3 1287.1,660.7 1287.1,682.1 1238.5,710.1 1190.0,716.7 1190.0,695.3" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1238.5" cy="688.7" r="7" fill="black" />
+<polygon points="1141.5,710.1 1092.9,682.1 1092.9,660.7 1141.5,667.3 1190.0,695.3 1190.0,716.7" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1062.9,643.4 1044.4,598.0 1062.9,608.7 1092.9,660.7 1092.9,682.1" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1044.4,598.0 1044.4,542.0 1062.9,496.6 1081.5,507.3 1081.5,563.4 1062.9,608.7" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1062.9" cy="552.7" r="7" fill="black" />
+<polygon points="1160.0,440.6 1130.0,479.3 1081.5,507.3 1062.9,496.6 1092.9,457.9 1141.5,429.9" fill="white" stroke="black" stroke-width="1.5" />
+<text x="1530.0" y="410.0" text-anchor="middle" font-size="16">Dôme 10</text>
+<polygon points="1590.0,570.0 1560.0,622.0 1500.0,622.0 1470.0,570.0 1500.0,518.0 1560.0,518.0" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1530.0" cy="570.0" r="7" fill="black" />
+<polygon points="1560.0,518.0 1500.0,518.0 1470.0,479.3 1500.0,440.6 1560.0,440.6 1590.0,479.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1560.0,518.0 1590.0,479.3 1638.5,507.3 1638.5,563.4 1590.0,570.0" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1638.5,563.4 1657.1,608.7 1627.1,660.7 1578.5,667.3 1560.0,622.0 1590.0,570.0" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1608.5" cy="615.3" r="7" fill="black" />
+<polygon points="1481.5,667.3 1500.0,622.0 1560.0,622.0 1578.5,667.3 1530.0,695.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1470.0,570.0 1500.0,622.0 1481.5,667.3 1432.9,660.7 1402.9,608.7 1421.5,563.4" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1451.5" cy="615.3" r="7" fill="black" />
+<polygon points="1421.5,507.3 1470.0,479.3 1500.0,518.0 1470.0,570.0 1421.5,563.4" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1481.5,429.9 1530.0,423.3 1578.5,429.9 1560.0,440.6 1500.0,440.6" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1530.0" cy="432.8" r="7" fill="black" />
+<polygon points="1590.0,479.3 1560.0,440.6 1578.5,429.9 1627.1,457.9 1657.1,496.6 1638.5,507.3" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1608.5" cy="468.6" r="7" fill="black" />
+<polygon points="1638.5,507.3 1657.1,496.6 1675.6,542.0 1675.6,598.0 1657.1,608.7 1638.5,563.4" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1675.6,598.0 1657.1,643.4 1627.1,682.1 1627.1,660.7 1657.1,608.7" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1578.5,667.3 1627.1,660.7 1627.1,682.1 1578.5,710.1 1530.0,716.7 1530.0,695.3" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1481.5,710.1 1432.9,682.1 1432.9,660.7 1481.5,667.3 1530.0,695.3 1530.0,716.7" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1481.5" cy="688.7" r="7" fill="black" />
+<polygon points="1402.9,643.4 1384.4,598.0 1402.9,608.7 1432.9,660.7 1432.9,682.1" fill="white" stroke="black" stroke-width="1.5" />
+<polygon points="1384.4,598.0 1384.4,542.0 1402.9,496.6 1421.5,507.3 1421.5,563.4 1402.9,608.7" fill="white" stroke="black" stroke-width="1.5" />
+<circle cx="1402.9" cy="552.7" r="7" fill="black" />
+<polygon points="1500.0,440.6 1470.0,479.3 1421.5,507.3 1402.9,496.6 1432.9,457.9 1481.5,429.9" fill="white" stroke="black" stroke-width="1.5" />
+</svg>
