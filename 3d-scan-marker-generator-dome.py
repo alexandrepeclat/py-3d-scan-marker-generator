@@ -79,8 +79,34 @@
 #             + pentagone marqué
 #
 #
-# Le seed fixe permet de retrouver exactement les mêmes
-# configurations lors d'une exécution ultérieure.
+# Choix des dômes affichés :
+#
+# Avec ces règles, il existe 72 configurations valides, soit
+# 24 dômes physiquement distincts une fois la symétrie de
+# rotation retirée (voir plus bas). Le programme n'affiche
+# jamais plus de dômes que nécessaire et les classe toujours
+# dans le même ordre (du "meilleur" au "moins bon"), selon 3
+# critères appliqués dans cet ordre :
+#
+#   1. Répartition des pastilles ("couverture") : plus petit
+#      écart angulaire maximal entre 2 pastilles consécutives
+#      autour du dôme. Objectif : qu'il n'y ait jamais un côté
+#      du dôme sans aucune pastille visible pendant un scan.
+#      Ce critère ne prend que quelques valeurs possibles (les
+#      dômes sont souvent à égalité).
+#
+#   2. En cas d'égalité sur la couverture : distance mutuelle
+#      maximale avec les autres dômes déjà retenus dans ce même
+#      palier, pour obtenir des dômes qui se ressemblent le
+#      moins possible entre eux (voir plus bas).
+#
+#   3. Si toujours à égalité : ordre alphabétique du texte
+#      généré (ex : "h-p-x-p-x-p" / "p-h-x-p-x-h-x-x-h"), pour
+#      un résultat entièrement déterministe.
+#
+# Cet ordre ne dépend jamais du nombre de dômes demandé (-n) :
+# les N premiers dômes affichés avec -n 10 sont toujours
+# exactement les N premiers d'un -n 20, etc.
 #
 # ============================================================
 
@@ -90,15 +116,12 @@
 
 import argparse
 import math
-import random
 from itertools import combinations
 
 
 # ==============================
 # Paramètres
 # ==============================
-
-SEED = 12345
 
 _parser = argparse.ArgumentParser(description="Génère des dômes de référence pour scan 3D.")
 _parser.add_argument(
@@ -110,8 +133,6 @@ _parser.add_argument(
 _args = _parser.parse_args()
 
 NB_DOMES = _args.nb_domes
-
-random.seed(SEED)
 
 
 # ==============================
@@ -227,31 +248,36 @@ def min_pairwise_distance(indices, dist):
     return min(dist[i][j] for i, j in combinations(indices, 2))
 
 
-def rank_by_diversity(dist):
+def rank_by_diversity(indices, dist):
     """
-    Classe tous les dômes du plus au moins "utile" à garder, du
-    premier au dernier, via un ajout glouton par plus grande
-    distance minimale (farthest-point). Contrairement à une
-    sélection optimisée pour un NB_DOMES précis (avec échanges
-    locaux), cet ordre ne dépend pas du nombre final demandé :
-    prendre les N premiers de ce classement pour N=10 donne
-    exactement les mêmes dômes que les 10 premiers d'un
-    classement pour N=20. C'est ce qui garantit que la sortie
-    reste cohérente quand on change -n.
+    Classe les dômes indiqués (indices dans distinct_configs, déjà
+    trié alphabétiquement) du plus au moins "utile" à garder, via
+    un ajout glouton par plus grande distance minimale
+    (farthest-point). Contrairement à une sélection optimisée pour
+    un NB_DOMES précis (avec échanges locaux), cet ordre ne dépend
+    pas du nombre final demandé : prendre les N premiers de ce
+    classement pour N=10 donne exactement les mêmes dômes que les
+    10 premiers d'un classement pour N=20. C'est ce qui garantit
+    que la sortie reste cohérente quand on change -n.
+
+    Aucun aléatoire : à distance égale, le dôme alphabétiquement
+    premier est toujours préféré (index le plus petit), ce qui
+    rend le résultat entièrement déterministe et reproductible.
     """
 
-    n = len(dist)
-    indices = list(range(n))
-    random.shuffle(indices)  # pour varier les ex-aequo, reproductible via SEED
+    ordered = sorted(indices)
+
+    if len(ordered) <= 1:
+        return ordered
 
     # Amorce : la paire la plus éloignée
-    i0, j0 = max(combinations(indices, 2), key=lambda p: dist[p[0]][p[1]])
+    i0, j0 = max(combinations(ordered, 2), key=lambda p: dist[p[0]][p[1]])
     order = [i0, j0]
 
     # Ajout glouton : à chaque étape, le dôme qui maximise sa
     # distance minimale aux dômes déjà classés
-    while len(order) < n:
-        remaining = [i for i in indices if i not in order]
+    while len(order) < len(ordered):
+        remaining = [i for i in ordered if i not in order]
         next_index = max(
             remaining,
             key=lambda i: min(dist[i][s] for s in order)
@@ -455,13 +481,24 @@ def _resolve_dome_geometry():
     for j, fid in enumerate(bottom_order):
         slots[("bottom", j)] = fid
 
-    return faces, slots, project
+    # Azimut (degrés, 0 = midi, sens horaire) de chaque slot, hors
+    # sommet qui n'a pas d'azimut significatif (il est au pôle).
+    # Réutilisé pour évaluer la répartition des pastilles.
+    slot_azimuth = {
+        key: math.degrees(rel_angle(fid))
+        for key, fid in slots.items()
+        if key != "apex"
+    }
+
+    return faces, slots, project, slot_azimuth
 
 
-_DOME_FACES, _DOME_SLOTS, _project = _resolve_dome_geometry()
+_DOME_FACES, _DOME_SLOTS, _project, _SLOT_AZIMUTH = _resolve_dome_geometry()
 
 
-def dome_svg(config, cx, cy, scale=90):
+def marked_slots(config):
+    """Slot -> pastille présente ou non, pour ce dôme."""
+
     middle, bottom = config
 
     marks: dict = {"apex": True}
@@ -470,6 +507,36 @@ def dome_svg(config, cx, cy, scale=90):
         marks[("middle", j)] = value == "x"
     for j, value in enumerate(bottom):
         marks[("bottom", j)] = value == "x"
+
+    return marks
+
+
+def coverage_score(config):
+    """
+    Plus grand écart angulaire (degrés, autour du pôle) entre 2
+    pastilles consécutives, hors sommet (toujours marqué, sans
+    azimut significatif puisqu'il est au pôle). Un grand écart
+    = un angle de vue latéral sans aucune pastille visible.
+    Plus la valeur est petite, mieux les pastilles sont
+    réparties tout autour du dôme.
+    """
+
+    marks = marked_slots(config)
+    azimuths = sorted(
+        _SLOT_AZIMUTH[slot] for slot, marked in marks.items()
+        if marked and slot != "apex"
+    )
+
+    count = len(azimuths)
+    gaps = (
+        (azimuths[(i + 1) % count] - azimuths[i]) % 360
+        for i in range(count)
+    )
+    return max(gaps)
+
+
+def dome_svg(config, cx, cy, scale=90):
+    marks = marked_slots(config)
 
     parts = []
 
@@ -547,7 +614,22 @@ dist = [
     for i in range(n)
 ]
 
-diversity_order = rank_by_diversity(dist)
+# Tri final : d'abord par palier de répartition (couverture), puis
+# par distance à l'intérieur d'un palier, puis alphabétiquement en
+# dernier recours (voir le commentaire en tête de fichier).
+coverage = [round(coverage_score(cfg), 6) for cfg in distinct_configs]
+
+tiers: list = []
+for i in sorted(range(n), key=lambda i: (coverage[i], i)):
+    if tiers and coverage[tiers[-1][-1]] == coverage[i]:
+        tiers[-1].append(i)
+    else:
+        tiers.append([i])
+
+diversity_order = []
+for tier in tiers:
+    diversity_order += rank_by_diversity(tier, dist)
+
 selected_indices = diversity_order[:NB_DOMES]
 domes = [distinct_configs[i] for i in selected_indices]
 
